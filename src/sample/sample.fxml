@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="487.0" prefWidth="617.0">
+         <children>
+            <Label id="lab" fx:id="labelblyaaa" alignment="CENTER" layoutX="54.0" layoutY="82.0" prefHeight="405.0" prefWidth="509.0" text="Laaa" textAlignment="CENTER" />
+            <Button id="btnStart" fx:id="btnStart" layoutX="288.0" layoutY="47.0" mnemonicParsing="false" onAction="#init" text="Start" />
+            <ImageView id="imgView" fx:id="imgView" fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="btnGo" fx:id="btnGo" layoutX="329.0" layoutY="412.0" mnemonicParsing="false" onAction="#go" text="Go">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button id="btnAdd" fx:id="btnAdd" layoutX="408.0" layoutY="412.0" mnemonicParsing="false" onAction="#addRandomQueElement" text="Add">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
