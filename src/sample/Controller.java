@@ -19,23 +19,24 @@ public class Controller {
     private Label labelblyaaa;
     @FXML
     private ImageView imgView;
-    @FXML
-    private Button btnGo;
 
     Image image;
 
     {
         try {
             image = new Image(new FileInputStream("src\\sample\\7.jpg"));
+//            imgView.setImage(new Image(new FileInputStream("src\\sample\\7.jpg")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
+
+
     QueueObject queueObject = new QueueObject();
 
-    public void setImgView() {
-        imgView.setImage(image);
+    public void setImgView() throws FileNotFoundException {
+        imgView.setImage(new Image(new FileInputStream("src\\sample\\7.jpg")));
     }
 
     public Label getLab() {
@@ -120,7 +121,7 @@ public class Controller {
         }
     }
 
-    public void go() {
+    public void go() throws FileNotFoundException {
         setImgView();
         System.out.println("new thread --->");
         QueueFormer queueFormer = new QueueFormer(queueObject, imgView);
@@ -134,5 +135,6 @@ public class Controller {
         System.out.println("hey?");
 
     }
+
 
 }
