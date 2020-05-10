@@ -27,7 +27,7 @@ public class QueueFormer implements Runnable {
                     }
 
                     try {
-                        Thread.sleep(4000);
+                        Thread.sleep(5000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

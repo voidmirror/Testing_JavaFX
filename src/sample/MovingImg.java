@@ -31,6 +31,7 @@ public class MovingImg implements Runnable  {
             TranslateTransition translateTransition = new TranslateTransition(Duration.millis(4000), imgView);
 //        translateTransition.setNode();
             translateTransition.setFromY(imgView.getScaleY() + imgView.getTranslateY());
+            System.out.println(imgView.getScaleY() + imgView.getTranslateY());
             translateTransition.setToY(imgView.getScaleY() + imgView.getTranslateY() + shift * 50);
             translateTransition.play();
 

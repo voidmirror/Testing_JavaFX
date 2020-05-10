@@ -16,16 +16,18 @@ import java.util.ResourceBundle;
 
 public class Controller {
     @FXML
-    private Label labelblyaaa;
+    private Label labelbl;
     @FXML
     private ImageView imgView;
 
     Image image;
 
+//    Controller()
     {
         try {
             image = new Image(new FileInputStream("src\\sample\\7.jpg"));
 //            imgView.setImage(new Image(new FileInputStream("src\\sample\\7.jpg")));
+//            setImgView();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -40,7 +42,7 @@ public class Controller {
     }
 
     public Label getLab() {
-        return labelblyaaa;
+        return labelbl;
     }
 
     public ImageView getImgView() {
@@ -58,7 +60,7 @@ public class Controller {
             s += "\n";
         }
 //        lab.setText("");
-        labelblyaaa.setText(s);
+        labelbl.setText(s);
     }
 
     public void init() {
@@ -115,7 +117,7 @@ public class Controller {
         if (e != 0) {
             queueObject.addQueElement(e);
         }
-        labelblyaaa.setText(e.toString());
+        labelbl.setText(e.toString());
         if (queueObject.sizeOfQue() % 3 == 0) {
             queueObject.printQue();
         }
